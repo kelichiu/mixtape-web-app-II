@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=BenchNine:400,700|Economica:400,700,700italic|Wire+One|Enriqueta:400,700|Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/SVGinject.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<header>
+		<h1 class="head">a mixed tape for you</h1>
+		<form action="">
+			<input id="playlistId" type="text" placeholder="YouTube playlist ID">
+			<input id="submit" type="submit" value="Submit">
+		</form>
+		</header>
+		<div class="cassette">
+			<div class="svg-cassette"></div>
+				<div id="ytplayer"></div>
+				<h2 id="title"></h2>
+				<h3 id="date_time"></h3>
+				<h3 id="description"></h3>
+				<div class="control">
+					<div class="svg-pause pause" id='bt_pause'></div>
+					<div class="svg-play play"  id='bt_play'></div>
+					<div class="svg-stop stop" id='bt_stop'></div>
+					
+			</div><!-- control -->
+			<a id="toggle" href="#">Songs for you</a>
+			<div class="filler"></div>
+			<div id="scrollHere">
+				<div id="thumbnails"></div>
+			</div>
+			
+		</div><!-- cassette -->
+
+			
+			
+	</div><!-- container -->
+	
+	<!-- <script src="js/app.js"></script> -->
+	<script src="js/player.js"></script>
+	<script src="js/svgAnimation.js"></script>
+	
+</body>
+</html>

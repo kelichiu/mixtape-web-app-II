@@ -1,0 +1,199 @@
+@import 'normalize';
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+$white: #fff;
+$grey: #333;
+$lightgrey: #666;
+$OpenSans: "Open Sans", sans-serif;
+$ReenBean: "Reenie Beanie", sans-serif;
+$Enrique: "Enriqueta", sans-serif;
+$Amatic: "Amatic SC", sans-serif;
+
+@mixin fontbase($font,$color,$size,$weight){
+	font-family: $font;
+	font-size: $size;
+	color:$color;
+	font-weight: $weight;
+}
+form{
+	margin: 5px 0 15px 50px;
+	input{
+		width:350px;
+	    height:40px;
+	    background:lighten($lightgrey,40%);
+	    padding:10px;
+	    margin-top:3px;
+	    @include fontbase ($OpenSans, $white, 1em, 300);
+	    border-radius:5px; 
+	    outline: 0;
+	    border:none;
+	}
+	#playlistId:focus{
+	    outline: 0;
+		background: lighten($lightgrey,20%);
+		}	
+	input[type="text"]{
+		@include fontbase ($OpenSans, $white, 1em, 300);
+	}
+
+	::-webkit-input-placeholder {
+	   color: #222222;
+	   @include fontbase ($OpenSans, $lightgrey, 1em, 300);
+	}
+
+	#submit{
+		width: 80px;
+		text-transform: uppercase;
+		@include fontbase ($OpenSans, $lightgrey, .8em, 400);
+	}
+}
+
+
+.container{
+	width: 1000px;
+	margin: 0 auto;
+
+	h1{
+		margin: 20px 0 0 50px;
+		@include fontbase ($ReenBean, $grey, 2.5em, 300);
+		letter-spacing: 2px;
+		
+	}
+
+}
+
+#circling1,#circling2{
+	transform-origin:50% 50%;
+}
+.cassette{
+	width: 900px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+	.svg-cassette{
+		position: absolute;
+		z-index: 10;
+	}
+	#ytplayer{
+		position: absolute;
+		top: 149px;
+		left: 274px;
+		z-index: 50;
+		border-radius: 25px;
+		overflow: hidden;
+		
+	}
+	#title{
+		position: absolute;
+		top: 18px;
+		left: 65px;
+		@include fontbase ($ReenBean, $white, 3em, 400);
+		z-index: 50;
+	}
+	#date_time{
+		position: absolute;
+		top: 300px;
+		right: 160px;
+		@include fontbase ($ReenBean, $white, 2em, 400);
+		z-index: 50;
+	}
+	#description{
+		display: none;
+		position: absolute;
+		z-index: 50;
+	}
+	#toggle{
+		width: 150px;
+		height: 30px;
+		position: absolute;
+		display: block;
+		bottom: 0;
+		z-index: 90;
+		top: 470px;
+		left: 326px;
+		@include fontbase ($Enrique, $white, 1.1em, 400);
+		letter-spacing: 2px;
+		text-decoration: none;
+		text-align: center;
+		&:hover{
+			border-bottom: 2px solid $white;
+		}
+	}
+
+	.control{
+		position: absolute;
+		z-index: 50;
+		top: 400px;
+		left: 300px;
+	}
+	.filler{
+		width: 100%;
+		height: 520px;
+		display: block;
+	}
+
+}
+.play, .pause, .stop{
+		display: inline-block;
+		float: left;
+		padding: 8px;
+		svg{
+			width: 50px;
+			}
+		}
+
+
+.scrollHere{
+	padding-top: 170px;
+}
+#thumbnails{
+	display: none;
+	height: 800px;
+	overflow: scroll;
+	.thumbnail{
+		display: inline-block;
+		float: left;
+		width: 350px;
+		margin: 5px;
+		img{
+			display: inline-block;
+			float: left;
+			width: 90px;
+			border-radius: 8px;
+		}
+		h4{
+			display: inline-block;
+			@include fontbase ($Enrique, $grey, .8em, 400);
+			margin-left: 5px;
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
